@@ -8,14 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 </head>
-<body>
+<body id="body">
+    <!-- <button class="switch" id="switch">
+        <span><i class="fa-solid fa-moon"></i></span>
+        <span><i class="fa-solid fa-sun"></i></span>
+    </button> -->
+    <div id="btn-container"></div>
+
     <div class="container">
         <div id="watch"></div>
 
        <div class="inputs">
             <input type="number" id="HourInput" placeholder="00" min="0" max="23"/>
 
-            <input type="number" id="MinuteInput" placeholder="00" min="0" max="59" step="1"/>
+            <input type="number" id="MinuteInput" placeholder="00" min="0" max="59" step="15"/>
        </div>
 
         <button id="set">Añadir Alarma</button>
@@ -25,5 +31,6 @@
 
 
     <script src="script.js"></script>
+    <script src="Modes.js"></script>
 </body>
 </html>

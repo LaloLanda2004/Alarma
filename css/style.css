@@ -7,8 +7,11 @@
 }
 
 body{
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     /* width: 100vw;
     height: 100vh; */
     width: 100%;
@@ -16,7 +19,117 @@ body{
     background-color: #252525;
     padding: 30px 40px 20px 40px;
     /* border: 2px solid #f00; */
+    /* border: 2px solid #f00; */
     /* padding: 50px 0 0 0; */
+}
+
+body.dark{
+    background: #c5c5c5;
+}
+
+body.dark > div.container{
+    background: #efefef;
+}
+
+body.dark > div.container input[type="checkbox"]{
+    background: #3E60E9;
+}
+
+body.dark > div.container input[type="checkbox"]:checked::before{
+    background: #2b44aa;
+}
+
+body.dark > div.container button.deleteButton{
+    color: #3E60E9;
+}
+
+body.dark > div.container span{
+    color: #000;
+    font-weight: 500;
+}
+
+#set.dark{
+    background: #3E60E9;
+}
+
+#watch.dark{
+    border: 4px solid #3E60E9;
+    color: #3E60E9;
+}
+
+#btn-container{
+    /* width: 10%; */
+    /* border: 2px solid #f00; */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.alarm-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em; /*! ---> 32px*/
+
+
+    /* width: 100px; */
+    padding: 10px;
+    border: none;
+
+    position: relative;
+    /* position: absolute;
+    top: 15px;
+    right: 20px; */
+
+
+    border-radius: 20px;
+    color: #fff;
+    /* background-color: #2a2f3b; */
+    background-color: #2f3640;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.alarm-btn::after{
+    content: " ";
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: unset;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #3E60E9;
+    border-radius: 50%;
+    /* transition: .4s; */
+}
+
+.alarm-btn.active::after{
+    
+    right: unset;
+    left: 0;
+}
+
+.alarm-btn.active::after{
+    background-color: #f39c12;
+}
+
+
+
+
+.alarm-btn i{
+    font-size: 1.4em;
+}
+
+.fa-moon{
+    color: #3E60E9;
+    margin-left: 5px;
+}
+
+.fa-sun{
+    color: #f39c12;
+    margin-right: 5px;
 }
 
 
@@ -36,7 +149,8 @@ body{
 
 
 .container{
-    padding: 20px 0 20px 0;
+    /* margin-top: 0;    */
+    padding: 20px 0 15px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -71,7 +71,6 @@ minuteInput.addEventListener("input", () => {
   
 
 
-
 //! CREA EL DIV QUE CONTIENE LAS ALARMAS
   
 const createAlarm = (alarmObj) => {
@@ -94,15 +93,15 @@ const createAlarm = (alarmObj) => {
     }
     });
 
-    alarmDiv.appendChild(checkbox);
+    alarmDiv.appendChild(checkbox); //! --> agrega el checkbox
     //Delete button
     let deleteButton = document.createElement("button");
     deleteButton.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
     deleteButton.classList.add("deleteButton");
     deleteButton.addEventListener("click", (e) => deleteAlarm(e));
 
-    alarmDiv.appendChild(deleteButton);
-    activeAlarm.appendChild(alarmDiv);
+    alarmDiv.appendChild(deleteButton); //! --> añade un boton al div
+    activeAlarm.appendChild(alarmDiv); //! --> agrega un div
 };
 
 
