@@ -3,7 +3,7 @@ let activeAlarm = document.querySelector(".activarAlarma");
 let hourInput = document.getElementById("HourInput");
 let minuteInput = document.getElementById("MinuteInput");
 let alarmsArray = [];
-let alarmSound = new Audio(`school.mp3`);
+let alarmSound = new Audio(`./audio/school.mp3`);
 
 let initialHour = 0,
 initialMinute = 0,
